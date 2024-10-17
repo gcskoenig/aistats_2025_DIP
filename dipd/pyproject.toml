@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dipd"
+version = "0.0.1"
+authors = [
+  { name="Gunnar König", email="g.koenig.edu@pm.me" },
+  { name="Eric Günther", email="eric.guenther@uni-tuebingen.de" },
+]
+description = "Disentangling Interactions and Dependencies (DIP) Decomposition."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "numpy",
+  "pandas",
+  "interpret",
+  "matplotlib",
+  "seaborn",
+  "ucimlrepo",
+  "tqdm",
+  "scipy",
+  "scikit-learn",
+  "category-encoders",
+  "statsmodels",
+]
+
+[project.urls]
+Homepage = "https://github.com/gcskoenig/dipd"
+Issues = "https://github.com/gcskoenig/dipd/issues"
+
