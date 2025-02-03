@@ -17,7 +17,7 @@ font_aesthetics = PLOTS_FONT_AESTHETICS.copy()
 font_aesthetics['fontsize'] = 6.5
 
 plt.figure()
-ax = forceplot(result_df_mean.T, 'Online News Popularity', figsize=(11, 8.2), 
+ax = forceplot(result_df_mean.T, 'Online News Popularity', figsize=(11, 7), 
                ylabel='Normalized Scores',
                separator_ident_prop=0.01,
                explain_surplus=True, xticklabel_rotation=45,

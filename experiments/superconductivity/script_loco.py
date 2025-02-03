@@ -35,6 +35,16 @@ kf = KFold(n_splits=folds, shuffle=True)
 splits = kf.get_n_splits(df)
 X, y = df.drop(target_variable, axis=1), df[target_variable]
 
+# get r2 score
+i, (train_index, test_index) = next(enumerate(kf.split(df)))
+model = EBM()
+X_train, y_train, X_test, y_test = X.iloc[train_index], y.iloc[train_index], X.iloc[test_index], y.iloc[test_index]
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+r2 = r2_score(y_test, y_pred)
+print(r2)
+
+
 results = []
 for i, (train_index, test_index) in enumerate(kf.split(df)):
     print(f'Fold {i+1}/{folds}')

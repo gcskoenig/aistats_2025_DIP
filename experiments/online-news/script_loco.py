@@ -23,7 +23,6 @@ from dipd import DIP
 from dipd.learners import EBM
 
 folds = 10
-
 wrk = DIP(df, target_name, EBM)
 
 kf = KFold(n_splits=folds, shuffle=True)
