@@ -19,6 +19,14 @@ def forceplot(data, title, figsize=None, ax=None, split_additive=False, color_di
     Forecplot that takes the results of decompositions and plots them as a stacked bar plot.
     data: pd.DataFrame with the decomposition scores as index and the columns as the features
     """
+        
+    # Ensure TrueType fonts (avoid Type 3)
+    plt.rcParams['pdf.fonttype'] = 42  # Use TrueType
+    plt.rcParams['ps.fonttype'] = 42  # Use TrueType for PS output
+
+    # Set the font globally
+    plt.rcParams['font.family'] = fontname
+    
     assert not (explain_collab and explain_surplus), 'Cannot explain both collab and surplus'
     
     TOTAL_COLOR = FORCEPLOT_COLOR_DICT['total']
