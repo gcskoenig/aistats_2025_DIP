@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import matplotlib
 import seaborn as sns
 import pandas as pd
 
@@ -13,7 +14,7 @@ fi_vals = pd.read_csv(savepath + f'3vars_loco_{seed}.csv', index_col=0)
 plt.figure(figsize=(5, 5))
 ax = sns.barplot(fi_vals)
 sns.despine(top=True, right=True, left=True, bottom=True, ax=ax)
-plt.savefig(savepath + f'3vars_loco_{seed}pdf')
+plt.savefig(savepath + f'3vars_loco_{seed}.pdf', format="pdf")
 plt.close()
 
 scores = pd.read_csv(savepath + f'3vars_loo_dip_{seed}.csv', index_col=0)

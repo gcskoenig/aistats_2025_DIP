@@ -289,4 +289,4 @@ plain_corr = df[columns].corr()['quality'].loc[['residual_sugar', 'density']]
 print('Plain correlations with quality: sugar {} and density {}'.format(plain_corr['residual_sugar'], plain_corr['density']))
 print('Average absolute correlation with quality: sugar {} and density {}'.format(agg_sugar, agg_density))
 
-corrs = df[fs].groupby(conditioning_vars).corr().loc[(slice(None), 'quality'), :].reset_index()
+# corrs = df[fs].groupby(conditioning_vars).corr().loc[(slice(None), 'quality'), :].reset_index()

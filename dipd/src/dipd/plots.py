@@ -234,8 +234,8 @@ def forceplot(data, title, figsize=None, ax=None, split_additive=False, color_di
         # Add labels and title
         margin = 0.05 * (max_val - min_val)
         ax.set_ylim(min_val - margin - SEPARATOR_IDENT, max_val + margin + SEPARATOR_IDENT)
-        ax.tick_params(axis='both', which='major', labelsize=fontsize, labelfontfamily=fontname)  
-        ax.set_ylabel(ylabel, fontsize=fontsize, fontname=fontname)
-        ax.set_title(title, fontsize=fontsize, fontname=fontname)    
-        legend = ax.legend(handles=patches, loc='upper right', prop={'family': fontname, 'size': fontsize})    
+        ax.tick_params(axis='both', which='major', labelsize=fontsize)  
+        ax.set_ylabel(ylabel, fontsize=fontsize)
+        ax.set_title(title, fontsize=fontsize)    
+        legend = ax.legend(handles=patches, loc='upper right', prop={'size': fontsize})    
         return ax        
